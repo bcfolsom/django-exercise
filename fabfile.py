@@ -4,7 +4,7 @@ env.hosts = ['45.32.200.184']
 env.user = 'brad'
 
 DIR = '/home/brad/django-exercise'
-VENV = 'source /home/brad/.virtualenvs/djangolearning/bin/activate && source SECRETS.ENV'
+VENV = 'source /home/brad/.virtualenvs/djangolearning/bin/activate && source secrets.env'
 
 def start ():
   with cd(DIR):
