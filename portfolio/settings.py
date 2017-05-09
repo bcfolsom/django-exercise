@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '45.32.200.184',
     'localhost',
+    'test.bradfolsom.com'
 ]
 
 
