@@ -42,12 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'blog',
+    'polls',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -112,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
@@ -126,3 +127,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static-compiled")
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
+EMAIL_HOST_USER = os.environ.get('SMTP_USERNAME', '')
+EMAIL_HOST_PASSWORD = os.environ.get('SMTP_PASSWORD', '')
+EMAIL_PORT = 587

@@ -7,4 +7,16 @@
 	<h1>{{ name | upper }}</h1>
 	<h3>{{ now | date:"l" }}</h3>
 	<img src="{% static "cat.jpg" %}" alt="cat">
+
+	<h1>Hello Form</h1>
+
+	<form action="/hello" method="POST">
+		{% csrf_token %}
+		<label>What's Your Name</label>
+		<br>
+		<input type="text" name="your_name">
+		<br><br>
+		<input type="submit">
+	</form>
+	
 {% endblock %}
